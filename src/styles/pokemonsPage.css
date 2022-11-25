@@ -236,7 +236,7 @@ p {
 	z-index: 3;
 }
 .pokemon-card-stats {
-	padding: 3rem 10px 10px 10px;
+	padding: 2.5rem 10px 10px 10px;
 	display: grid;
 	grid-template-columns: 4rem 1fr;
 	grid-template-rows: 1.4rem 1.4rem 1.4rem 1.4rem;
@@ -247,7 +247,7 @@ p {
 	border-radius: 10px;
 	grid-column: 1/2;
 	grid-row: 3/6;
-	row-gap: 5px;
+	row-gap: 2px;
 }
 .pagination {
 	margin: auto;

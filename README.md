@@ -1,2 +1,2 @@
 # Pokedex
-netflify: https://graceful-horse-21ac57.netlify.app/
+netflify: https://pokedex-by-alan-vargas.netlify.app

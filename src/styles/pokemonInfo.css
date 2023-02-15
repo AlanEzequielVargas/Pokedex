@@ -123,6 +123,11 @@
       z-index: 1;
     }
   }
+	@media (max-height: 790px){
+    .platform {
+      display: none;
+    }
+  }
 	.pokemon-name {
     
 		grid-column: 1/2;

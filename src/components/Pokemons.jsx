@@ -32,7 +32,7 @@ const Pokemons = () => {
 	const navigate = useNavigate();
 
 	function searchCharacter() {
-		navigate(`/pokemon/${inputValue}`);
+		inputValue && navigate(`/pokemon/${inputValue}`);
 	}
 
 	function backToInput() {

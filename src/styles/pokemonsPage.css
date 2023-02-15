@@ -5,278 +5,624 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+html {
+  box-sizing: inherit;
+}
 a {
 	text-decoration: none;
 }
 p {
 	color: black;
 }
-.pokedex {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 70vh 80vh 7rem;
-	gap: 15px;
-	background-color: brown;
-}
-.gamepad {
-	width: 50%;
-	margin: auto;
-	grid-column: 1/2;
-	grid-row: 2/3;
-	cursor: pointer;
-}
-.input-section {
-	margin: 20px;
-	height: 100%;
-	display: grid;
-	grid-template-columns: 1fr 30% 10% 10% 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-column: 1/5;
-	grid-row: 1/2;
-	gap: 15px;
-}
-.input-section h1 {
-	margin: auto;
-	width: 100%;
-	text-align: center;
-	grid-column: 2/5;
-	grid-row: 1/2;
-	color: white;
-	font-size: 7rem;
-	font-family: "Sono", sans-serif;
-}
-.input-section .welcome-message {
-	font-family: "Press Start 2P", cursive;
-	font-size: 0.8rem;
-	letter-spacing: 1px;
-	line-height: 1.4rem;
-	margin: auto;
-	padding: 8px;
-	height: 4rem;
-	grid-column: 2/5;
-	grid-row: 2/3;
-	background-color: rgba(77, 173, 127, 0.735);
-	color: rgb(31, 31, 31);
-	border-radius: 5px;
-	border: 2px black solid;
-	box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
-}
-.pokeball {
-	width: 1rem;
-}
-.input-section h2 span {
-	font-size: 1rem;
-	color: rgb(0, 0, 0);
-}
-.pokemon-alert-display {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows: 1fr 1fr;
-	grid-column: 1/2;
-	grid-row: 3/4;
-	background-color: rgba(77, 173, 127, 0.63);
-	border: 2px black solid;
-	box-shadow: -5px 5px 21px 1px rgba(0,0,0,0.68) inset;
-}
-.pokemon-alert-display img {
-	margin: auto;
-	width: 90%;
-	grid-column: 1/2;
-	grid-row: 1/3;
-}
-.pokemon-alert-display .alert {
-	font-size: 2rem;
-	margin: auto;
-	font-family: "Press Start 2P", cursive;
-	color: black;
-	grid-column: 2/3;
-	grid-row: 1/2;
-	animation-name: alert;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-}
-@keyframes alert {
-	0% {
-		opacity: 0%;
-	}
-	49% {
-		opacity: 0%;
-	}
-	50% {
-		opacity: 100%;
-	}
-	99% {
-		opacity: 100%;
-	}
-	100% {
-		opacity: 0%;
-	}
-}
-.pokemon-alert-display .alert-message {
-	font-size: 0.8rem;
-	margin: 2px auto 0px auto;
-	font-family: "Press Start 2P", cursive;
-	color: black;
-	grid-column: 2/3;
-	grid-row: 2/3;
+
+@media (max-width: 1024px){
+  .pokedex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 12vh 12vh 12vh 12vh 100vh  12vh;
+    row-gap: 1rem;
+    column-gap: 0;
+    background-color: brown;
+  }
+  .gamepad {
+    
+    width: 30px;
+    cursor: pointer;
+  }
+  .input-section img {
+    display: none;
+  }
+  .input-section {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    margin: auto;
+    text-align: center;
+  }
+  .input-section h1 {
+    
+    color: white;
+    font-size: 3rem;
+    font-family: "Sono", sans-serif;
+  }
+  .input-section .welcome-message {
+    margin: auto;
+    text-align: center;
+    font-size: 80%;
+    width: 90%;
+    height: 6rem;
+    padding: 1rem;
+    font-family: "Press Start 2P", cursive;
+    background-color: rgba(77, 173, 127, 0.735);
+    color: rgb(31, 31, 31);
+    border-radius: 5px;
+    border: 2px black solid;
+    box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
+  }
+  .pokeball {
+    display: none;
+  }
+  .input-section h2 span {
+    text-align: center;
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+  }
+  .pokemon-alert-display {
+    display: none;
+    width: 30%;
+    
+    
+    background-color: rgba(77, 173, 127, 0.63);
+    border: 2px black solid;
+    box-shadow: -5px 5px 21px 1px rgba(0,0,0,0.68) inset;
+    
+  }
+  
+  .pokemon-alert-display .alert {
+    font-size: 1rem;
+ 
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    
+    animation-name: alert;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes alert {
+    0% {
+      opacity: 0%;
+    }
+    49% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 100%;
+    }
+    99% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+  .pokemon-alert-display .alert-message {
+    
+    font-size: 1rem;
+
+    font-family: "Press Start 2P", cursive;
+    color: black;
+   
+  }
+  
+  .input-section .btn-gamepad {
+    
+    margin: auto;
+    width: 2rem;
+    font-size: 1.4rem;
+    background-color: rgb(0, 174, 255);
+    border-radius: 30px;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    
+    box-shadow: -27px 22px 47px -2px rgba(0, 0, 0, 0.75) inset;
+  }
+  .input-section .btn-gamepad button {
+    
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: rgb(121, 121, 121);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  .input-section input {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 40%;
+    height: 2rem;
+    background-color: rgb(255, 250, 110);
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .input-section input::placeholder {
+    text-align: center;
+  }
+  .input-section select {
+    margin: auto;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+  }
+  .input-section select option {
+    background-color: rgba(77, 173, 127, 0.735);
+  }
+  .input-section select option:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgba(255, 222, 173, 0);
+  }
+  .select-display {
+    display: none;
+    width: 80%;
+    height: 40%;
+    grid-column: 5/6;
+    grid-row: 3/4;
+    background-color: rgba(77, 173, 127, 0.63);
+    border: 2px black solid;
+    box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.68) inset;
+  }
+  .false-btns {
+    display: none;
+    display: none !important;
+    grid-column: 5/6;
+   grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .false-btn-1 {
+  display: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: chartreuse;
+    border-radius: 50px;
+    box-shadow: -5px 5px 34px -12px rgba(0,0,0,0.68);
+ }
+ .false-btn-2 {
+  display: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(255, 191, 0);
+    border-radius: 50px;
+    box-shadow: -5px 5px 34px -12px rgb(0, 0, 0);
+ }
+  .pokemons-container {
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    grid-column: 1/4;
+    grid-row: 5/6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    
+     background-color: rgba(77, 173, 127, 0.68);
+    /* background-color: rgb(255, 242, 143); */
+     border: 10px black solid;
+     box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
+  }
+  .pokemon-card {
+    
+    display: grid;
+    grid-row: 10% 90%;
+    margin: auto;
+    background: rgb(255, 245, 193);
+    background: linear-gradient(
+      47deg,
+      rgba(255, 245, 193, 1) 4%,
+      rgba(255, 217, 26, 1) 32%,
+      rgba(255, 255, 255, 1) 41%,
+      rgba(236, 185, 114, 1) 56%,
+      rgba(230, 163, 70, 1) 91%
+    );
+    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    text-decoration: none;
+  }
+  .pokemon-card h1 {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", cursive;
+    font-size: 80%;
+    margin: auto;
+    
+  }
+  .pokemon-card img {
+    
+    margin: auto;
+    width: 50%;
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+    
+  }
+   @media (min-width: 768px){
+    .pokemon-card img {
+      display: flex;
+      margin: auto;
+      width: 9rem;
+      
+    } 
+  }
+  .pokemon-card-stats {
+    display: none;
+    padding: 3rem 10px 10px 10px;
+    
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 1.4rem 1.4rem 1.4rem 1.4rem;
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 3/6;
+    row-gap: 5px;
+  }
+  .pagination {
+   
+    margin: auto;
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .pagination button {
+   
+    background-color: rgba(255, 228, 196, 0);
+    border: none;
+  }
+  .arrow-pagination {
+    
+    width: 4rem;
+    cursor: pointer;
+    
+    
+  }
+  
+  .parlante {
+    
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     margin: auto;
+     grid-column: 3/4;
+    grid-row: 6/7;
+     background-color: rgba(240, 248, 255, 0);
+     width: 30%;
+     height: 80%;
+  }
+  .line {
+    
+     background-color: black;
+     border-radius: 10px;
+     border-right: solid rgb(71, 6, 6) 6px;
+  }
+  
 }
 
-.input-section .btn-gamepad {
-	margin: auto;
-	width: 7rem;
-	height: 7rem;
-	font-size: 1.4rem;
-	background-color: rgb(0, 174, 255);
-	border-radius: 30px;
-	grid-column: 5/6;
-	grid-row: 2/3;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: -27px 22px 47px -2px rgba(0, 0, 0, 0.75) inset;
-}
-.input-section .btn-gamepad button {
-	width: 5rem;
-	height: 5rem;
-	font-size: 1.2rem;
-	color: rgb(121, 121, 121);
-	border-radius: 50px;
-	cursor: pointer;
-	border: none;
-	box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-}
 
-.input-section input {
-	margin: auto;
-	width: 60%;
-	height: 30%;
-	grid-column: 2/5;
-	grid-row: 3/4;
-	background-color: rgb(255, 250, 110);
-	border-radius: 10px;
-	outline: none;
-	border: 0;
-	font-family: "Press Start 2P", cursive;
-	text-align: center;
-}
-.input-section input::placeholder {
-	text-align: center;
-}
-.input-section select {
-	margin: auto;
-	width: 100%;
-	height: 20%;
-	background-color: rgba(240, 248, 255, 0);
-	border-color: rgba(0, 0, 0, 0);
-	outline: none;
-	border: 0;
-	cursor: pointer;
-	font-family: "Press Start 2P", cursive;
-}
-.input-section select option {
-	background-color: rgba(77, 173, 127, 0.735);
-}
-.input-section select option:hover {
-	cursor: pointer;
-	color: black;
-	background-color: rgba(255, 222, 173, 0);
-}
-.select-display {
-	grid-column: 5/6;
-	grid-row: 3/4;
-	background-color: rgba(77, 173, 127, 0.63);
-	border: 2px black solid;
-	box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.68) inset;
-}
-.pokemons-container {
-	margin: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-auto-rows: 1fr 1fr 1fr 1fr;
-	grid-column: 1/5;
-	grid-row: 2/3;
-   background-color: rgba(77, 173, 127, 0.68);
-	/* background-color: rgb(255, 242, 143); */
-   border: 10px black solid;
-   box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
-}
-.pokemon-card {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 2rem 3rem 1rem 2rem auto;
-	margin: auto;
-	background: rgb(255, 245, 193);
-	background: linear-gradient(
-		47deg,
-		rgba(255, 245, 193, 1) 4%,
-		rgba(255, 217, 26, 1) 32%,
-		rgba(255, 255, 255, 1) 41%,
-		rgba(236, 185, 114, 1) 56%,
-		rgba(230, 163, 70, 1) 91%
-	);
-	border-radius: 15px;
-	width: 90%;
-	height: 90%;
-	text-decoration: none;
-}
-.pokemon-card h1 {
-	margin: 1rem auto;
-	color: rgb(0, 0, 0);
-	font-family: "Press Start 2P", cursive;
-	font-size: 1rem;
-	grid-column: 1/2;
-	grid-row: 1/2;
-	z-index: 5;
-}
-.pokemon-card img {
-	margin: auto;
-	width: 30%;
-	grid-column: 1/2;
-	grid-row: 2/5;
-	z-index: 3;
-}
-.pokemon-card-stats {
-	padding: 3rem 10px 10px 10px;
-	display: grid;
-	grid-template-columns: 4rem 1fr;
-	grid-template-rows: 1.4rem 1.4rem 1.4rem 1.4rem;
-	width: 80%;
-	height: 85%;
-	margin: auto;
-	background-color: white;
-	border-radius: 10px;
-	grid-column: 1/2;
-	grid-row: 3/6;
-	row-gap: 5px;
-}
-.pagination {
-	margin: auto;
-	grid-column: 2/4;
-	grid-row: 3/4;
-}
-.pagination button {
-	background-color: rgba(255, 228, 196, 0);
-	border: none;
-}
-.arrow-pagination {
-	width: 4rem;
-	cursor: pointer;
-}
-.parlante {
-   display: flex;
-   align-items: center;
-   justify-content: space-evenly;
-   margin: auto;
-   grid-column: 4/5;
-	grid-row: 3/4;
-   background-color: rgba(240, 248, 255, 0);
-   width: 30%;
-   height: 80%;
-}
-.line {
-   width: 1rem;
-   height: 100%;
-   background-color: black;
-   border-radius: 10px;
-   border-right: solid rgb(71, 6, 6) 6px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px){
+ 
+  *,
+  *::after,
+  *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    color: black;
+  }
+  .pokedex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70vh 80vh 7rem;
+    gap: 15px;
+    background-color: brown;
+  }
+  .gamepad {
+    width: 50%;
+    margin: auto;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    cursor: pointer;
+  }
+  .input-section {
+    margin: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 30% 10% 10% 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    gap: 15px;
+  }
+  .input-section h1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    grid-column: 2/5;
+    grid-row: 1/2;
+    color: white;
+    font-size: 7rem;
+    font-family: "Sono", sans-serif;
+  }
+  .input-section .welcome-message {
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
+    margin: auto;
+    padding: 8px;
+    height: 4rem;
+    grid-column: 2/5;
+    grid-row: 2/3;
+    background-color: rgba(77, 173, 127, 0.735);
+    color: rgb(31, 31, 31);
+    border-radius: 5px;
+    border: 2px black solid;
+    box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
+  }
+  .pokeball {
+    width: 1rem;
+  }
+  .input-section h2 span {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+  }
+  .pokemon-alert-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: rgba(77, 173, 127, 0.63);
+    border: 2px black solid;
+    box-shadow: -5px 5px 21px 1px rgba(0,0,0,0.68) inset;
+  }
+  .pokemon-alert-display img {
+    margin: auto;
+    width: 90%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .pokemon-alert-display .alert {
+    font-size: 2rem;
+    margin: auto;
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    animation-name: alert;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes alert {
+    0% {
+      opacity: 0%;
+    }
+    49% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 100%;
+    }
+    99% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+  .pokemon-alert-display .alert-message {
+    font-size: 0.8rem;
+    margin: 2px auto 0px auto;
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  
+  .input-section .btn-gamepad {
+    margin: auto;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.4rem;
+    background-color: rgb(0, 174, 255);
+    border-radius: 30px;
+    grid-column: 5/6;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -27px 22px 47px -2px rgba(0, 0, 0, 0.75) inset;
+  }
+  .input-section .btn-gamepad button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    color: rgb(121, 121, 121);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  .input-section input {
+    margin: auto;
+    width: 60%;
+    height: 30%;
+    grid-column: 2/5;
+    grid-row: 3/4;
+    background-color: rgb(255, 250, 110);
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+  }
+  .input-section input::placeholder {
+    text-align: center;
+  }
+  .input-section select {
+    margin: auto;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+  }
+  .input-section select option {
+    background-color: rgba(77, 173, 127, 0.735);
+  }
+  .input-section select option:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgba(255, 222, 173, 0);
+  }
+  .select-display {
+    grid-column: 5/6;
+    grid-row: 3/4;
+    background-color: rgba(77, 173, 127, 0.63);
+    border: 2px black solid;
+    box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.68) inset;
+  }
+  .pokemons-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    grid-column: 1/5;
+    grid-row: 2/3;
+     background-color: rgba(77, 173, 127, 0.68);
+    /* background-color: rgb(255, 242, 143); */
+     border: 10px black solid;
+     box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.71) inset;
+  }
+  .pokemon-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 3rem 1rem 2rem auto;
+    margin: auto;
+    background: rgb(255, 245, 193);
+    background: linear-gradient(
+      47deg,
+      rgba(255, 245, 193, 1) 4%,
+      rgba(255, 217, 26, 1) 32%,
+      rgba(255, 255, 255, 1) 41%,
+      rgba(236, 185, 114, 1) 56%,
+      rgba(230, 163, 70, 1) 91%
+    );
+    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    text-decoration: none;
+  }
+  .pokemon-card h1 {
+    margin: 1rem auto;
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", cursive;
+    font-size: 1rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 5;
+  }
+  .pokemon-card img {
+    margin: auto;
+    width: 30%;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    z-index: 3;
+  }
+  .pokemon-card-stats {
+    padding: 2rem 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 1.4rem 1.4rem 1.4rem 1.4rem;
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 3/6;
+  }
+  .pagination {
+    margin: auto;
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+  .pagination button {
+    background-color: rgba(255, 228, 196, 0);
+    border: none;
+  }
+  .arrow-pagination {
+    width: 4rem;
+    cursor: pointer;
+  }
+  .parlante {
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     margin: auto;
+     grid-column: 4/5;
+    grid-row: 3/4;
+     background-color: rgba(240, 248, 255, 0);
+     width: 30%;
+     height: 80%;
+  }
+  .line {
+     width: 1rem;
+     height: 100%;
+     background-color: black;
+     border-radius: 10px;
+     border-right: solid rgb(71, 6, 6) 6px;
+  }
+
 }

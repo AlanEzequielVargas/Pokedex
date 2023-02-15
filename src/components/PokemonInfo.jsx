@@ -37,8 +37,8 @@ const PokemonInfo = () => {
 	return (
 		<div className="pokedex">
 			<div className="input-section">
-         <img onClick={backToInput}className='arrow-pagination' src={leftArrow} alt="" />
-				<img src={gamepad} className="gamepad" alt="gamepad" />
+         <img onClick={backToInput} className='arrow-pagination back-arrow' src={leftArrow} alt="" />
+				<img src={gamepad} className="gamepad-arr" alt="gamepad" />
 				<h1>Pokedex</h1>
 				<h2 className="welcome-message">
 					SCANNING POKEMON

@@ -44,7 +44,7 @@ const InputForEnter = () => {
             <button onClick={enter}>Enter</button> */}
       </div>
 
-      <img className='oak-img' src={profesorOak}></img>
+      <img className='oak-img' src={profesorOak}/>
       
       </div>
    );
